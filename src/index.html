@@ -12,39 +12,46 @@
 </head>
 
 <body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js"></script>  
-  <script src="js/main.js"></script>
+  <script
+  src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.5/require.min.js" data-main="./js/main">
 
-  <div class="container">
-      <div>
-          <h1>Архив метеослужбы</h1>
-      </div>
-      <div class="flexbox-row">
+</script>
 
-          <div class="flexbox-col">
-              <button id="btn-temp" type="button" class="btn btn-primary">Температура</button>
-              <button id="btn-prec" type="button" class="btn btn-primary">Осадки</button>
-          </div>
-          <div class="flexbox-col left-margin full-width">
-              <div>
-                  <select id="start-year" class="selectpicker">
-                      <option>Mustard</option>
-                      <option>Ketchup</option>
-                      <option>Relish</option>
-                  </select>
-                  <select id="end-year" class="selectpicker">
-                      <option>Mustard</option>
-                      <option>Ketchup</option>
-                      <option>Relish</option>
-                  </select>
-
-              </div>
-
-              <canvas id="graph" class="top-margin"></canvas>
-          </div>
-      </div>
-      
+<div class="container">
+  <div>
+    <h1>Архив метеослужбы</h1>
   </div>
+  <div class="flexbox-row">
+
+    <div class="flexbox-col">
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="radio-temp" value="option1" checked>
+          Температура
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="radio-prec" value="option2">
+          Влажность
+        </label>
+      </div>
+    </div>
+    <div class="flexbox-col left-margin">
+      <div>
+        <select id="start-year" class="selectpicker">
+        </select>
+        <select id="end-year" class="selectpicker">
+        </select>
+
+      </div>
+
+      <canvas id="graph" width="600" height="400" class="top-margin"></canvas>
+    </div>
+  </div>
+  <small>Tested in Chrome 65, FF 59 and Safari 11</small>
+
+</div>
 </body>
 
 </html>

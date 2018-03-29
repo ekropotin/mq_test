@@ -6,9 +6,9 @@
             "folder_exclude_patterns":
             [
                 ".git",
-                "node_modules",
+                //"node_modules",
                 "coverage",
-                "dist"
+                //"dist"
             ]
         }
     ],
